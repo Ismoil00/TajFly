@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/innerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/outerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/layout_style"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/planesImages"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/Dip.White"
+            android:contentDescription="@string/Content_Description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/flagFrom"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/Dip.White"
+            android:contentDescription="@string/Content_Description"
+            app:layout_constraintStart_toStartOf="@+id/cityFlyingFrom"
+            app:layout_constraintTop_toBottomOf="@+id/cityFlyingFrom" />
+
+        <ImageView
+            android:id="@+id/flagTo"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/Dip.White"
+            android:contentDescription="@string/Content_Description"
+            app:layout_constraintEnd_toEndOf="@+id/cityFlyingTo"
+            app:layout_constraintTop_toBottomOf="@+id/cityFlyingTo" />
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="Company"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/flyingHours"
+            app:layout_constraintStart_toStartOf="@+id/flyingHours"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/flightNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="flightsNumber"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/companyName"
+            app:layout_constraintStart_toStartOf="@+id/companyName"
+            app:layout_constraintTop_toBottomOf="@id/companyName"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/airportFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="portFrom"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyName"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/airportTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="portTo"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/planesImages"
+            app:layout_constraintTop_toTopOf="@+id/airportFrom"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/cityFlyingFrom"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center|left"
+            android:text="cityFrom"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/departureTime"
+            app:layout_constraintTop_toBottomOf="@+id/departureTime"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/cityFlyingTo"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center|right"
+            android:text="cityTo"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/arrivalTime"
+            app:layout_constraintTop_toBottomOf="@+id/arrivalTime"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/departureTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/times_style"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="1time"
+            android:textColor="@color/Dip.White"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/airportFrom"
+            app:layout_constraintTop_toBottomOf="@+id/airportFrom"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/arrivalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/times_style"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="2time"
+            android:textColor="@color/Dip.White"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/airportTo"
+            app:layout_constraintTop_toBottomOf="@+id/airportTo"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Status"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/flyingHours"
+            app:layout_constraintStart_toStartOf="@+id/flyingHours"
+            app:layout_constraintTop_toBottomOf="@+id/cityFlyingFrom"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/stops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Stops"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/flyingHours"
+            app:layout_constraintStart_toStartOf="@+id/flyingHours"
+            app:layout_constraintTop_toBottomOf="@+id/flyingHours"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/flyingHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="flyHours"
+            android:textColor="@color/Dip.semi_Black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/departureTime"
+            app:layout_constraintEnd_toStartOf="@+id/arrivalTime"
+            app:layout_constraintStart_toEndOf="@+id/departureTime"
+            app:layout_constraintTop_toTopOf="@+id/departureTime"
+            tools:ignore="HardcodedText"/>
+
+        <ImageView
+            android:id="@+id/horLine1"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/Content_Description"
+            android:src="@drawable/horizontal_line"
+            app:layout_constraintBottom_toBottomOf="@+id/flyingHours"
+            app:layout_constraintEnd_toStartOf="@+id/flyingHours"
+            app:layout_constraintStart_toEndOf="@+id/departureTime"
+            app:layout_constraintTop_toTopOf="@+id/flyingHours" />
+
+        <ImageView
+            android:id="@+id/horLine2"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/Content_Description"
+            android:src="@drawable/horizontal_line"
+            app:layout_constraintBottom_toBottomOf="@+id/flyingHours"
+            app:layout_constraintEnd_toStartOf="@+id/arrivalTime"
+            app:layout_constraintStart_toEndOf="@+id/flyingHours"
+            app:layout_constraintTop_toTopOf="@+id/flyingHours" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

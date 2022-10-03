@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/menu_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/profilePhoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/Content_Description"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/profilePhoto"
+            android:layout_alignBottom="@+id/profilePhoto"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/profilePhoto"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="User name"
+            android:textColor="@color/Dip.White"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-35dp"
+            android:layout_toEndOf="@+id/profilePhoto"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="Active"
+            android:textColor="@color/Dip.Green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginLowerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_style_03"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:elevation="10dp"
+            tools:ignore="UnusedAttribute,UselessParent">
+
+            <ImageView
+                android:id="@+id/loginImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_login"
+                android:contentDescription="@string/Content_Description"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/loginImage"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/login"
+                android:textColor="@color/Dip.Blue_darker"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_blue"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/homeLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/loginLayout"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml"
+            android:onClick="goHome">
+
+            <ImageView
+                android:id="@+id/homeImage01"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_home01"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/homeImage01"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/home"
+                android:textColor="@color/Dip.Blue_darker"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_blue"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/settingLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/homeLayout01"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_style_03"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:elevation="10dp"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/settingImage01"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_setting01"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/settingImage01"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/settings"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/NotificationLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/settingLayout01"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/notificationImage01"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_notification"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/notificationImage01"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/notification"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/storageLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/NotificationLayout01"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/storageImage01"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_storage"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/storageImage01"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/storage_and_data"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/languageLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/storageLayout01"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/languageImage01"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_language"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/languageImage01"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/app_language"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/inviteLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/languageLayout01"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/inviteImage01"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_invite"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/inviteImage01"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/invite_a_friend"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signOutLowerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/homeLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="goHome"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/homeImage02"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_home01"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/homeImage02"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/home"
+                android:textColor="@color/Dip.Blue_darker"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_blue"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/settingLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/homeLayout02"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/settingImage02"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_setting01"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/settingImage02"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/settings"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/NotificationLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/settingLayout02"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/notificationImage02"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_notification"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/notificationImage02"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/notification"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/storageLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/NotificationLayout02"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/storageImage02"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_storage"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/storageImage02"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/storage_and_data"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/languageLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/storageLayout02"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/languageImage02"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_language"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/languageImage02"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/app_language"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/inviteLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/languageLayout02"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_style_03"
+            android:elevation="10dp"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="Functions"
+            tools:ignore="UnusedAttribute,UselessParent,UsingOnClickInXml">
+
+            <ImageView
+                android:id="@+id/inviteImage02"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_invite"
+                android:contentDescription="@string/Content_Description" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/inviteImage02"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/invite_a_friend"
+                android:textColor="#3B3B3B"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_black"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/signOutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/inviteLayout02"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_style_03"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:elevation="10dp"
+            tools:ignore="UnusedAttribute,UselessParent">
+
+            <ImageView
+                android:id="@+id/signOutImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/icon_login"
+                android:contentDescription="@string/Content_Description"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/signOutImage"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/sign_out"
+                android:textColor="@color/Dip.Blue_darker"
+                android:textSize="25sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/arrow2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_right_arrow_blue"
+                android:contentDescription="@string/Content_Description" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

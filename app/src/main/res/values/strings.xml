@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">My Diploma</string>
+    <string name="Content_Description">Poor internet connection</string>
+    <string name="plane_taking_off">Departure</string>
+    <string name="plane_landing">Arrival</string>
+    <string name="main_page_btn">to Flights</string>
+    <string name="choose_a_city_textview">Choose a City!</string>
+    <string name="logo_top">TajFly.com</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">Settings</string>
+    <string name="support">Support</string>
+    <string name="faq">FAQ</string>
+    <string name="rate_this_app">Rate this App</string>
+    <string name="share_it">Share it</string>
+    <string name="about_us">About Us</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="communication">Communication</string>
+    <string name="profile">Profile</string>
+    <string name="login">Login</string>
+    <string name="dushanbe">Dushanbe</string>
+    <string name="khujand">Khujand</string>
+    <string name="kulob">Kulob</string>
+    <string name="hint_choose_a_city">Choose a city</string>
+    <string name="log_in">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="don_t_have_an_account">Don\'t have an Account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="signup">Sign up</string>
+    <string name="sign_out">Sign out</string>
+    <string name="home">Home</string>
+    <string name="notification">Notification</string>
+    <string name="storage_and_data">Storage and data</string>
+    <string name="app_language">App language</string>
+    <string name="invite_a_friend">Invite a friend</string>
+</resources>

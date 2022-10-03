@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/settings"
+                    android:icon="@drawable/icon_settings"
+                    android:title="@string/settings" />
+
+                <item
+                    android:id="@+id/privacyPolicy"
+                    android:icon="@drawable/icon_privacy_policy"
+                    android:title="@string/privacy_policy" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/communication">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/support"
+                    android:icon="@drawable/icon_support"
+                    android:title="@string/support" />
+
+                <item
+                    android:id="@+id/FAQ"
+                    android:icon="@drawable/icon_questions"
+                    android:title="@string/faq" />
+
+                <item
+                    android:id="@+id/appRating"
+                    android:icon="@drawable/icon_rating"
+                    android:title="@string/rate_this_app" />
+
+                <item
+                    android:id="@+id/sharing"
+                    android:icon="@drawable/icon_share"
+                    android:title="@string/share_it" />
+
+                <item
+                    android:id="@+id/aboutUs"
+                    android:icon="@drawable/icon_about_us"
+                    android:title="@string/about_us" />
+            </group>
+        </menu>
+    </item>
+</menu>
